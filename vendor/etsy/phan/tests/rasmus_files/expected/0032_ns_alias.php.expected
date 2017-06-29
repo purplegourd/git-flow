@@ -1,0 +1,2 @@
+%s:14 PhanTypeMismatchArgument Argument 1 (arg) is int[] but \NS1\SubA\A::test() takes string defined at %s:5
+

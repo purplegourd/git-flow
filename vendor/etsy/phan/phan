@@ -1,0 +1,5 @@
+#!/usr/bin/env /usr/local/php/php720alpha/bin/php
+<?php 
+//error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED);
+error_reporting(0);
+require_once 'src/phan.php';

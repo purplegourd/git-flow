@@ -1,0 +1,71 @@
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/5.0/phpunit.xsd"
+        bootstrap="src/Phan/Bootstrap.php"
+        colors="true"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        stopOnError="true"
+        stopOnFailure="false"
+        stopOnIncomplete="false"
+        stopOnSkipped="false"
+        stopOnRisky="false"
+        backupStaticAttributes="true"
+        verbose="false">
+
+    <listeners>
+        <listener class="Phan\Tests\PhanTestListener"/>
+    </listeners>
+
+    <php>
+        <const name="RASMUS_TEST_FILE_DIR" value="./tests/rasmus_files/src"/>
+        <const name="RASMUS_EXPECTED_DIR" value="./tests/rasmus_files/expected"/>
+        <const name="TEST_FILE_DIR" value="./tests/files/src"/>
+        <const name="EXPECTED_DIR" value="./tests/files/expected"/>
+        <const name="MULTI_FILE_DIR" value="./tests/multi_files/src"/>
+        <const name="MULTI_EXPECTED_DIR" value="./tests/multi_files/expected"/>
+        <const name="SOAP_TEST_FILE_DIR" value="./tests/soap_files/src"/>
+        <const name="SOAP_EXPECTED_DIR" value="./tests/soap_files/expected"/>
+        <const name="INTL_TEST_FILE_DIR" value="./tests/intl_files/src"/>
+        <const name="INTL_EXPECTED_DIR" value="./tests/intl_files/expected"/>
+    </php>
+
+    <testsuites>
+        <testsuite name="AnalyzerTest">
+            <file>tests/Phan/AnalyzerTest.php</file>
+        </testsuite>
+        <testsuite name="ForkPoolTest">
+            <file>tests/Phan/ForkPoolTest.php</file>
+        </testsuite>
+        <testsuite name="PhanTest">
+            <file>tests/Phan/PhanTest.php</file>
+        </testsuite>
+        <testsuite name="RasmusTest">
+            <file>tests/Phan/RasmusTest.php</file>
+        </testsuite>
+        <testsuite name="MultiFileTest">
+            <file>tests/Phan/MultiFileTest.php</file>
+        </testsuite>
+        <testsuite name="SoapTest">
+            <file>tests/Phan/SoapTest.php</file>
+        </testsuite>
+        <testsuite name="IntlTest">
+            <file>tests/Phan/IntlTest.php</file>
+        </testsuite>
+        <testsuite name="LanguageTest">
+            <directory>tests/Phan/Language</directory>
+        </testsuite>
+        <testsuite name="OutputPrinterTest">
+            <directory>tests/Phan/Output/Printer</directory>
+        </testsuite>
+        <testsuite name="TupleTest">
+            <directory>tests/Phan/Library/TupleTest.php</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory>src/</directory>
+        </whitelist>
+    </filter>
+</phpunit>

@@ -1,0 +1,2 @@
+%s:9 PhanUndeclaredStaticMethod Static call to undeclared method \B::func3
+

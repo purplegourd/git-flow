@@ -4,5 +4,8 @@
   "repositories" : [ {
     "type" : "composer",
     "url" : "https://packagist.org/"
-  } ]
+  } ],
+  "require-dev": {
+    "etsy/phan": "^0.7.0"
+  }
 }
