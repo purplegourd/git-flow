@@ -1,0 +1,2 @@
+%s:10 PhanTypeMismatchArgument Argument 1 (c) is string[] but \f() takes \Closure defined at %s:9
+

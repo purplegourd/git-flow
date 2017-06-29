@@ -1,0 +1,3 @@
+%s:18 PhanUndeclaredMethod Call to undeclared method \A::g
+%s:21 PhanUndeclaredMethod Call to undeclared method \B::f
+
